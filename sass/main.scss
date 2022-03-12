@@ -1,0 +1,217 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+$main-color: #087f5b;
+$main-color-light-1: #099268;
+$white-color: #ffffff;
+$grey-color: #343a40;
+$grey-color-light-1: #495057;
+
+$inter-font-family: 'Inter', sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%; // ! 1rem = 10px
+}
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+body {
+	font-family: $inter-font-family;
+	color: $grey-color;
+	border-bottom: 0.8rem solid $main-color;
+}
+
+.container {
+	width: 96rem;
+	margin: 0 auto;
+}
+
+header,
+section {
+	margin-bottom: 4.8rem;
+}
+
+h2 {
+	margin-bottom: 4.8rem;
+	font-size: 3.6rem;
+	letter-spacing: -0.5px;
+}
+
+.grid-3-cols {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 8rem;
+}
+
+.btn {
+	&--big {
+		font-size: 1.8rem;
+		padding: 1.6rem 3.2rem;
+	}
+	&--small {
+		font-size: 1.4rem;
+		padding: 0.8rem 1.2rem;
+	}
+	&:link,
+	&:visited {
+		background-color: $main-color;
+		color: $white-color;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 500;
+		display: inline-block;
+		letter-spacing: 1px;
+		border-radius: 10rem;
+	}
+	&:hover,
+	&:active {
+		background-color: $main-color-light-1;
+	}
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/* HEADER */
+header {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 8rem;
+	margin-top: 4.8rem;
+}
+
+.header-text-box {
+	align-self: center;
+}
+
+h1 {
+	margin-bottom: 2.4rem;
+	font-size: 4.4rem;
+	line-height: 1.1;
+	letter-spacing: -1px;
+}
+
+.header-text {
+	margin-bottom: 2.4rem;
+	font-size: 1.8rem;
+	line-height: 1.7;
+}
+
+img {
+	width: 100%;
+	border-radius: 1.2rem;
+}
+
+/* FEATURES */
+.features {
+	&-icon {
+		stroke: $main-color;
+		width: 3.2rem;
+		height: 3.2rem;
+		margin-bottom: 1.6rem;
+	}
+	&-title {
+		margin-bottom: 1.6rem;
+		font-size: 2rem;
+	}
+	&-text {
+		font-size: 1.8rem;
+		line-height: 1.7;
+	}
+}
+
+/* TESTIMONIAL */
+.testimonial-section {
+	background-color: $main-color;
+	color: $white-color;
+	padding: 2.4rem;
+	border-radius: 1.2rem;
+}
+
+.testimonial-box {
+	grid-column: 2 / -1;
+	align-self: center;
+
+	& h2 {
+		margin-bottom: 2.4rem;
+		font-size: 2.4rem;
+	}
+}
+
+.testimonial-text {
+	font-style: italic;
+	margin-bottom: 2.4rem;
+	font-size: 1.8rem;
+	line-height: 1.7;
+}
+.testimonial-author {
+	font-size: 1.4rem;
+}
+
+/* CHAIRS */
+.chair-box {
+	padding: 2.4rem;
+}
+.chair {
+	box-shadow: 0 2rem 3rem 0 rgba($color: #000000, $alpha: 0.1);
+	border-radius: 1.2rem;
+
+	& img{
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+h3 {
+	margin-bottom: 2.4rem;
+	font-size: 2rem;
+}
+
+.chair-details {
+	list-style: none;
+	margin-bottom: 2.4rem;
+	& li {
+		display: flex;
+		align-items: center;
+		gap: 1.2rem;
+		margin-bottom: 2.4rem;
+		font-size: 1.6rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.chair-icon {
+	stroke: $main-color;
+	width: 2.4rem;
+	height: 2.4rem;
+}
+
+.chair-price {
+	display: flex;
+	justify-content: space-between;
+	font-size: 2rem;
+	align-items: center;
+}
+
+footer {
+	margin-bottom: 4.8rem;
+	font-size: 1.4rem;
+	color: $grey-color-light-1;
+	max-width: 60%;
+	text-align: center;
+	margin: 3rem auto;
+}
